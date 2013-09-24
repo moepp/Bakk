@@ -1,40 +1,59 @@
-%%%% Time-stamp: <2012-08-20 17:41:39 vk>
+%%%% Time-stamp: <2013-09-24 14:39:01 vk>
+%% ========================================================================
+%%%% Disclaimer
+%% ========================================================================
+%%
+%% created by
+%%
+%%      Stephan Moser
+%%
+
+%% ========================================================================
+%%%% Introduction
+%% ========================================================================
 
 %% example text content
 %% scrartcl and scrreprt starts with section, subsection, subsubsection, ...
 %% scrbook starts with part (optional), chapter, section, ...
 \chapter{Einleitung}
 
-a) Ausgangssituation zu Beginn Ihrer Bachelorarbeit
-In eine Einleitung gehören erste Informationen über den Gegenstand des Themas (die als Appetizer dienen und anregen sollen, mehr zu erfahren). Es ist sinnvoll, in der Einleitung einen Überblick über die Gliederung Ihrer Bachelorarbeit zu geben – so kann der Leser Ihnen besser folgen. Die Einleitung gibt Ihnen auch die Möglichkeit darzulegen, wie sich Ihre Fragestellung in den bisherigen Forschungsstand eingliedert, an welche Forschungsrichtung Sie anknüpfen, welcher Sie widersprechen und weshalb.
-b) Problembeschreibung
-Die Einleitung muss Ihr Thema eingrenzen (und diese Eingrenzung rechtfertigen) und Ihr Erkenntnisinteresse präzisieren und begründen.
-c) Das Ziel Ihrer Bachelorarbeit
-Beschreiben Sie auch das Ziel Ihres Forschungsvorhabens. Was wollen Sie am Ende herausgefunden haben und weshalb?
-d) Methode und Herangehensweise an Ihr Thema
-Ihre Einleitung legt Ihre Methode und Vorgehensweise dar und begründet sie.
+Zweifelsfrei hat das Aufkommen Mobiler Technologien und Smartphones mittlerweile große 
+Auswirkungen auf unser tägliches Leben. Dazu gehört auch die Art wie wir heutzutage
+Lernen. 
+Um dieser Tatsache Rechnung zu tragen wurde im Zuge dieser Arbeit eine iPhone Application (kurz App genannt)  für Apple's 
+Smartphone Betriebssystem iOS entwickelt, die Benedikt \citeauthor{Neuhold2013} bei seiner Diplomarbeit \enquote{Adaptives Informationssystem zur Erlernung
+mehrstelliger Addition und Subtraktion} \footcite{Neuhold2013} unterstützen soll.
 
-eingehen auf die jeweiligen kapitel
+Konkret geht es darum, dass es durch diese App für SchülerInnen unkompliziert und schnell möglich sein soll
+Additionen und Subtraktionen zu üben. Dazu melden sich die SchülerInnen über die iPhone App bei Neuhold's System an, und 
+bekommen daraufhin auf ihre Bedürfnisse angepasste Rechenübungen die ihrem derzeitigen Wissensstand entsprechen.
+Der eigentliche Zweck der App besteht aber darin, dass die Ergebnisse und auch 
+alle Zwischenergebnisse in Form von Überträgen protokolliert
+werden und in weiterer Folge an das bereits erwähnte System von Benedikt
+Neuhold zur Analyse weitergeleitet werden.
 
-Ich hoffe hier viel Umlaute wie öäü ÖÄÜ ä ü ö Ä Ü Ö versenden zu können sonst zuck i aus...
+Da in erster Linie Kinder im Volksschulalter die Adressaten für Addition -und Subtraktionsübungen sind
+liegt ein wesentlicher Teil der Arbeit darin, die App so einfach wie möglich und dabei grafisch 
+ansprechend zu gestalten, um die langfristige Motivation der SchülerInnen sicherzustellen.
 
+Im folgenden Abschnitt~\ref{sec:Gliederung} wird ein kurzer Überblick auf diese schriftliche Arbeit gegeben.
+\section{Gliederung der Arbeit}
+\label{sec:Gliederung}
 
+In Kapitel \ref{chap:sota} wird kurz darauf eingegangen, welche Arbeiten es zu diesem Thema bereits 
+gibt, und in welcher Form sich diese von der hier diskutierten Arbeit unterscheiden. 
 
-This is my text with an example Figure~\ref{fig:example} and example
-citation~\cite{StrunkWhite} or \textcite{Bringhurst1993}. And there is another
-\enquote{citation} which is located at the bottom\footcite{tagstore}.
+Kapitel \ref{chap:impl} handelt von der technischen Umsetzung der App, das heißt es wird 
+beschrieben welche Technologien zur Umsetzung der Arbeit verwendet wurden und wie diese im 
+Kontext dieser App angepasst und verwendet wurden.
 
-\myfig{TU_Graz_Logo}%% filename in figures folder
-  {width=0.1\textwidth,height=0.1\textheight}%% maximum width/height, aspect ratio will be kept
-  {Example figure.}%% caption
-  {}%% optional (short) caption for table of figures
-  {fig:example}%% label
+Gewonnene Ergebnisse sowie aufgetretene Probleme im Vorfeld der Arbeit, während der Umsetzung aber auch in der Nachbereitung
+werden in Kapitel \ref{chap:disc} diskutiert.
 
-Now you are able to write your own document. Always keep in mind: it's
-the \emph{content} that matters, not the form. But good typography is
-able to deliver the content much better than information set with bad
-typography. This template allows you to concentrate on writing good
-content while the form is done by the template definitions.
+Das vorletzte Kapitel \ref{chap:concl} fasst die gesamte Arbeit mit all den gewonnenen Erkenntnissen
+noch einmal zusammen bevor in Kaptiel \ref{chap:outlook} ein Ausblick gewagt wird in welche 
+Richtung sich das Thema des Mobilen Lernens hinentwickeln wird.
+
 
 
 %% vim:foldmethod=expr
