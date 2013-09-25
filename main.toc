@@ -1,0 +1,49 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {ngerman}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abstract}{v}{section*.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Gliederung der Arbeit}{2}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Stand der Technik}{3}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}MathBoard \footcite {https://itunes.apple.com/de/app/mathboard/id373909837?mt=8}}{3}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Addition Master: Mathematik Spiel \footcite {https://itunes.apple.com/de/app/addition-master-mathematik/id672669932?mt=8}}{3}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Addition ! \footcite {https://itunes.apple.com/de/app/addition-!/id447548669?mt=8} and Subtraction !\footcite {https://itunes.apple.com/de/app/subtraction-!/id447548515?mt=8}}{4}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Weitere Apps}{7}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Umsetzung}{11}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Diskussion}{13}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Zusammenfassung}{15}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Ausblick}{17}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Example Chapter}{19}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Language and Writing Style}{21}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.1}Some Basic Rules of English}{22}{section.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.2}Avoid Austrianisms}{24}{section.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.3}Clear Writing}{25}{section.8.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.4}Avoiding Gender Bias}{26}{section.8.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.5}Titles and Headings in Initial Caps}{28}{section.8.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.6}Use a Spelling Checker}{28}{section.8.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.7}Use a Dictionary}{29}{section.8.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.8}Use a Thesaurus}{29}{section.8.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Literatur}{33}{appendix*.8}

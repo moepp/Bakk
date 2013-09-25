@@ -1,44 +1,156 @@
-%%%% Time-stamp: <2012-08-20 17:41:39 vk>
+%%%% Time-stamp: <2013-09-24 14:39:01 vk>
+%% ========================================================================
+%%%% Disclaimer
+%% ========================================================================
+%%
+%% created by
+%%
+%%      Stephan Moser
+%%
+
+%% ========================================================================
+%%%% State of the art
+%% ========================================================================
 
 %% example text content
 %% scrartcl and scrreprt starts with section, subsection, subsubsection, ...
-%% scrbook starts with part (optional), chapter, section, ...
-\chapter{State of the Art}
+%% scrbook starts with part (optional), chapter, section, ...\chapter{State of the Art}
+\chapter{Stand der Technik}
 \label{chap:sota}
 
-Addition Master https://itunes.apple.com/de/app/addition-master-mathematik/id672669932?mt=8
+In diesem Kapitel werden Arbeiten zum Thema 
+\enquote{Addition und Subtraktion mit mobilen Geräten} vorgestellt.
+Dabei handelt es sich vorwiegend um aktuelle iPhone Apps aus 
+Apples' iTunes Store. \footcite{https://itunes.apple.com/de/genre/ios/id36?mt=8} Diese Apps sind 
+gewöhnlich für Kinder im Pflichtschulalter gedacht und dadurch auch meist grafisch ansprechend 
+designt.
 
-Einleitung
-	Forschungsfrage 1-2 Seiten
-State of the Art
-	Literaturstudie(Welche Apps gibt es)
-	Zitierbare Artikel (mit Autor)
-	Reine Internetlinks als Fußnoten (URL mit letzter Abruf) 
-Beschreibung der Arbeit
-	meist der ausführlichste
-	techn. Ausführung
-Diskussion
-Zusammenfassung und Ausblick
-	kurz 1 - 2 Seiten
-Literatur
+In den folgenden Abschnitten werden ein paar ausgewählte Apps vorgestellt.
+
+\section{MathBoard \footcite{https://itunes.apple.com/de/app/mathboard/id373909837?mt=8}}
+Diese App dient als Best Practice App im Bereich Mathematik. Aufgrunddessen wird sie 
+auch von Apple selbst bei diversen Veranstaltungen präsentiert. In Abbildung \ref{fig:mathboard} 
+wird ein Screenshot dieser App gezeigt, auf dem sich aber erkennen lässt, dass der Funktionsumfang dieser App 
+nicht wirklich mit der App die in dieser Arbeit präsentiert wird korreliert, und deswegen hier nur
+als \enquote{Best Practice} Beispiel angeführt wird.
+\myfig{mathboard}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot von Mathboard.}%% caption
+  {Screenshot Mathboard}%% optional (short) caption for table of figures
+  {fig:mathboard}%% label
+
+\section{Addition Master: Mathematik Spiel \footcite{https://itunes.apple.com/de/app/addition-master-mathematik/id672669932?mt=8}}
+In Abbildung \ref{fig:addmaster} ist ersichtlich, dass die Benutzeroberfläche dieser App, 
+und dabei vor allem die Präsentation der Zahleneingabemöglichkeit sehr ähnlich der in dieser Arbeit 
+vorgestellten App gestaltet wurde. Zum Funktionsumfang gehören hier: 
+\begin{itemize}
+	\item Trainingsmodus
+	\item Statistik
+	\item Übungsmodus
+\end{itemize}
+
+\myfig{addmaster}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot von Addition Master: Mathematik Spiel.}%% caption
+  {Screenshot Addition Master}%% optional (short) caption for table of figures
+  {fig:addmaster}%% label
 
 
 
-This is my text with an example Figure~\ref{fig:example} and example
-citation~\cite{StrunkWhite} or \textcite{Bringhurst1993}. And there is another
-\enquote{citation} which is located at the bottom\footcite{tagstore}.
+\section{Addition ! \footcite{https://itunes.apple.com/de/app/addition-!/id447548669?mt=8} and Subtraction !\footcite{https://itunes.apple.com/de/app/subtraction-!/id447548515?mt=8}}
+Hierbei handelt es sich um zwei separat existierende Apps vom selben Entwickler zum Thema
+Addition und Subtraktion. In der Recherche waren diese zwei Apps auch die einzigen, bei denen
+der/die SchülerIn Überträge zur Rechenerleichterung notieren konnte.
+Funktionalität:
+\begin{itemize}
+	\item 2 oder 3 Summanden
+	\item bis 6 Ziffern pro Summand
+	\item Hilfe zur Problemstellung
+	\item Tipp zur Problemstellung
+	\item Tutorial in dem die App erklärt wird
+	\item Editor für eigene Problemstellungen
+\end{itemize}
+In Abbildung \ref{fig:addition!} ist ein Screenshot der App \enquote{Addition !} zu sehen. Darauf ist ersichtlich, dass
+die Überträge über dem ersten Summanden einzutragen sind. Überträge über dem ersten Summanden
+zu notieren werden ist jedoch nur im englischsprachigen Raum üblich, im deutschsprachigen Raum werden 
+die Überträge üblicherweise unter dem letzten Summanden notiert. In der in dieser Arbeit vorgestellten
+App ist es möglich die Felder für die Überträge entweder oben oder unten anzeigen zu lassen.
+\myfig{addition!}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot von Addition !.}%% caption
+  {Screenshot Addition !}%% optional (short) caption for table of figures
+  {fig:addition!}%% label
 
-\myfig{TU_Graz_Logo}%% filename in figures folder
-  {width=0.1\textwidth,height=0.1\textheight}%% maximum width/height, aspect ratio will be kept
-  {Example figure.}%% caption
-  {}%% optional (short) caption for table of figures
-  {fig:example}%% label
+Abbildung \ref{fig:subtraction!} zeigt einen Screenshot der App \enquote{Subtraction !}. Dabei ist 
+eine ausgeklügelte Methode zur Notierung der Überträge bei Subtraktionen ersichtlich.
+\myfig{subtraction!}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot von Subtraction !.}%% caption
+  {Screenshot Subtraction !}%% optional (short) caption for table of figures
+  {fig:subtraction!}%% label
 
-Now you are able to write your own document. Always keep in mind: it's
-the \emph{content} that matters, not the form. But good typography is
-able to deliver the content much better than information set with bad
-typography. This template allows you to concentrate on writing good
-content while the form is done by the template definitions.
+
+\section{Weitere Apps}
+
+In diesem Abschnitt werden kurz weitere ausgewählte Apps im Bereich des mobilen Lernens vorgestellt.
+
+\myfig{add&sub}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot von Add \& Sub.}%% caption
+  {Screenshot Add \& Sub}%% optional (short) caption for table of figures
+  {fig:addandsub}%% label
+Abbildung \ref{fig:addandsub} zeigt die App \enquote{Add \& Sub \footcite{https://itunes.apple.com/de/app/add-sub/id693077439?mt=8}}. Sie ist sehr einfach gehalten und auch 
+in ihrem Funktionsumfang eingeschränkt.
+
+\myfig{addsubspringbird}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot von Add \& Sub with Springbird.}%% caption
+  {Screenshot Add \& Sub with Springbird}%% optional (short) caption for table of figures
+  {fig:addandsubspringbird}%% label
+
+\myfig{addsubforkids}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot von Add \& Sub For Kids.}%% caption
+  {Screenshot Add \& Sub For Kids}%% optional (short) caption for table of figures
+  {fig:addsubforkids}%% label
+
+Eine weitere Möglichkeit Mathematik Apps für Kinder attraktiv zu gestalten ist, die Apps als Spiele
+aufzubauen. Die Abbildungen \ref{fig:addandsubspringbird} und \ref{fig:addsubforkids} zeigen die Apps
+\enquote{Add \& Sub with Springbird \footcite{https://itunes.apple.com/de/app/add-subtract-springbird-mathe/id601505771?mt=8}}
+und
+\enquote{Addition \& Subtraction For Kids \footcite{https://itunes.apple.com/de/app/addition-subtraction-for-kids/id426907035?mt=8}}
+die vor allem für SchülerInnen bis 10 Jahren auf dieses Prinzip setzt.
+
+
+Weiters zu erwähnen sind die Apps:
+\begin{itemize}
+\item \enquote{Add Sub K-1 \footcite{https://itunes.apple.com/de/app/add-sub-k-1/id486199509?mt=8}}
+in Abbildung \ref{fig:addsubk1}
+\item \enquote{Addition - Subtraction\footcite{https://itunes.apple.com/de/app/addition-subtraction/id542109601?mt=8}}
+in Abbildung \ref{fig:add-sub}
+\item \enquote{Subtract with Fun \footcite{https://itunes.apple.com/de/app/subtract-with-fun/id699563137?mt=8}}
+in Abbildung \ref{fig:subwithfun}
+
+\end{itemize}
+
+\myfig{addsubk1}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot von Add Sub K-1.}%% caption
+  {Screenshot Add Sub K-1}%% optional (short) caption for table of figures
+  {fig:addsubk1}%% label
+
+\myfig{add-sub}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot von Addition - Subtraction.}%% caption
+  {Screenshot Addition - Subtraction}%% optional (short) caption for table of figures
+  {fig:add-sub}%% label
+  
+\myfig{subwithfun}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot von Subtraction ith Fun.}%% caption
+  {Screenshot Subtraction with Fun}%% optional (short) caption for table of figures
+  {fig:subwithfun}%% label
+
 
 
 %% vim:foldmethod=expr

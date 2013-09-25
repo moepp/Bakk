@@ -1,0 +1,17 @@
+[0] Config.pm:387> INFO - This is Biber 1.6
+[1] Config.pm:390> INFO - Logfile is 'main.blg'
+[100] biber-darwin:218> INFO - === Tue Sep 24, 2013, 10:51:22
+[101] Biber.pm:325> INFO - Reading 'main.bcf'
+[192] Biber.pm:623> INFO - Found 15 citekeys in bib section 0
+[230] Biber.pm:2995> INFO - Processing section 0
+[249] Biber.pm:3129> INFO - Looking for bibtex format file 'references-biblatex.bib' for section 0
+[251] bibtex.pm:898> INFO - Decoding LaTeX character macros into UTF-8
+[255] bibtex.pm:775> INFO - Found BibTeX data source 'references-biblatex.bib'
+[294] Utils.pm:169> WARN - The field 'url' in entry 'Neuhold2013' cannot be null, deleting it
+[295] Utils.pm:169> WARN - The field 'publisher' in entry 'Bringhurst1993' cannot be null, deleting it
+[442] Biber.pm:2881> INFO - Overriding locale 'en_US.UTF-8' default tailoring 'variable = shifted' with 'variable = non-ignorable'
+[442] Biber.pm:2887> INFO - Sorting 'entry' list 'nyt' keys
+[443] Biber.pm:2891> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[603] bbl.pm:472> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[605] bbl.pm:545> INFO - Output to main.bbl
+[605] Biber.pm:105> INFO - WARNINGS: 2
