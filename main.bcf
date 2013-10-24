@@ -1961,20 +1961,20 @@
     <bcf:citekey order="9">https://itunes.apple.com/de/app/addition-master-mathematik/id672669932?mt=8</bcf:citekey>
     <bcf:citekey order="10">https://itunes.apple.com/de/app/addition-!/id447548669?mt=8</bcf:citekey>
     <bcf:citekey order="11">https://itunes.apple.com/de/app/subtraction-!/id447548515?mt=8</bcf:citekey>
-    <bcf:citekey order="12">https://itunes.apple.com/de/app/addition-!/id447548669?mt=8</bcf:citekey>
-    <bcf:citekey order="13">https://itunes.apple.com/de/app/subtraction-!/id447548515?mt=8</bcf:citekey>
-    <bcf:citekey order="14">https://itunes.apple.com/de/app/add-sub/id693077439?mt=8</bcf:citekey>
-    <bcf:citekey order="15">https://itunes.apple.com/de/app/add-subtract-springbird-mathe/id601505771?mt=8</bcf:citekey>
-    <bcf:citekey order="16">https://itunes.apple.com/de/app/addition-subtraction-for-kids/id426907035?mt=8</bcf:citekey>
-    <bcf:citekey order="17">https://itunes.apple.com/de/app/add-sub-k-1/id486199509?mt=8</bcf:citekey>
-    <bcf:citekey order="18">https://itunes.apple.com/de/app/addition-subtraction/id542109601?mt=8</bcf:citekey>
-    <bcf:citekey order="19">https://itunes.apple.com/de/app/subtract-with-fun/id699563137?mt=8</bcf:citekey>
-    <bcf:citekey order="20">StrunkWhite</bcf:citekey>
-    <bcf:citekey order="21">Bringhurst1993</bcf:citekey>
-    <bcf:citekey order="22">tagstore</bcf:citekey>
-    <bcf:citekey order="23">StrunkWhite</bcf:citekey>
-    <bcf:citekey order="24">Bringhurst1993</bcf:citekey>
-    <bcf:citekey order="25">tagstore</bcf:citekey>
+    <bcf:citekey order="12">https://itunes.apple.com/de/app/add-sub/id693077439?mt=8</bcf:citekey>
+    <bcf:citekey order="13">https://itunes.apple.com/de/app/add-subtract-springbird-mathe/id601505771?mt=8</bcf:citekey>
+    <bcf:citekey order="14">https://itunes.apple.com/de/app/addition-subtraction-for-kids/id426907035?mt=8</bcf:citekey>
+    <bcf:citekey order="15">https://itunes.apple.com/de/app/add-sub-k-1/id486199509?mt=8</bcf:citekey>
+    <bcf:citekey order="16">https://itunes.apple.com/de/app/addition-subtraction/id542109601?mt=8</bcf:citekey>
+    <bcf:citekey order="17">https://itunes.apple.com/de/app/subtract-with-fun/id699563137?mt=8</bcf:citekey>
+    <bcf:citekey order="18">http://developer.apple.com/xcode/ [Zugriff am 24.10.2013]</bcf:citekey>
+    <bcf:citekey order="19">http://www.gnu.org/software/gnustep/resources/documentation/Developer/Base/ProgrammingManual/manual_toc.html [Zugriff am 24.10.2013]</bcf:citekey>
+    <bcf:citekey order="20">http://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/ [Zugriff am 24.10.2013]</bcf:citekey>
+    <bcf:citekey order="21">http://www.w3.org/TR/soap9/</bcf:citekey>
+    <bcf:citekey order="22">http://www.w3.org/XML/</bcf:citekey>
+    <bcf:citekey order="23">http://sudzc.com</bcf:citekey>
+    <bcf:citekey order="24">NSA2001</bcf:citekey>
+    <bcf:citekey order="25">https://developer.apple.com/library/mac/documentation/cocoa/Reference/Foundation/Classes/NSUserDefaults_Class/Reference/Reference.html</bcf:citekey>
     <bcf:citekey order="26">StrunkWhite</bcf:citekey>
     <bcf:citekey order="27">Bringhurst1993</bcf:citekey>
     <bcf:citekey order="28">tagstore</bcf:citekey>
@@ -1984,23 +1984,6 @@
     <bcf:citekey order="32">StrunkWhite</bcf:citekey>
     <bcf:citekey order="33">Bringhurst1993</bcf:citekey>
     <bcf:citekey order="34">tagstore</bcf:citekey>
-    <bcf:citekey order="35">KeithThesis</bcf:citekey>
-    <bcf:citekey order="36">KeithThesis</bcf:citekey>
-    <bcf:citekey order="37">KeithThesis</bcf:citekey>
-    <bcf:citekey order="38">KeithThesis</bcf:citekey>
-    <bcf:citekey order="39">StrunkWhite</bcf:citekey>
-    <bcf:citekey order="40">Strunk</bcf:citekey>
-    <bcf:citekey order="41">NASAGuide</bcf:citekey>
-    <bcf:citekey order="42">Zobel-WritingCompSci</bcf:citekey>
-    <bcf:citekey order="43">BugsInWriting</bcf:citekey>
-    <bcf:citekey order="44">Phillips-HowGetPhD</bcf:citekey>
-    <bcf:citekey order="45">Roget</bcf:citekey>
-    <bcf:citekey order="45">RogetII</bcf:citekey>
-    <bcf:citekey order="46">DictionaryCom</bcf:citekey>
-    <bcf:citekey order="47">DictChemnitz</bcf:citekey>
-    <bcf:citekey order="48">DictLeoOrg</bcf:citekey>
-    <bcf:citekey order="49">Roget</bcf:citekey>
-    <bcf:citekey order="50">RogetII</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="nyt">
   <bcf:sorting>

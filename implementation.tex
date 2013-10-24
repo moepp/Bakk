@@ -6,25 +6,420 @@
 \chapter{Umsetzung}
 \label{chap:impl}
 
-blabla
+Das folgende Kapitel beschäftigt sich mit der technischen Umsetzung und einer Erläuterung der einzelnen
+Module des Additions -und Subtraktionstrainers. Zur Erstellung der App wurde die von Apple integrierte Entwicklungsumgebung 
+\enquote{Xcode\footcite{http://developer.apple.com/xcode/ [Zugriff am 24.10.2013]}} in der Version \enquote{4.6.2} verwendet um die App zu schreiben.
+Die zu diesem Zweck verwendete Programmiersprache ist zum Großteil 
+\enquote{Ojective-C\footcite{http://www.gnu.org/software/gnustep/resources/documentation/Developer/Base/ProgrammingManual/manual_toc.html [Zugriff am 24.10.2013]}} die als
+objektorientierte Erweiterung der Programmiersprache \enquote{C} angesehen wird.
+
+Der Aufbau der Addition -und Subtraktionstrainer App wurde sehr modular gestaltet. Durch die Verwendung 
+von \enquote{ViewControllern \footcite{http://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/ [Zugriff am 24.10.2013]}}
+lässt sich dieser modulare Aufbau sauber beibehalten, was die Erweiterung der App vereinfacht.
+
+Wegen dieser Modularisierung der App werden im folgenden Abschnitt \ref{sec:modules} die technischen Einzelheiten pro Modul erläutert.
+%\section{Module}
+%\label{sec:modules}
+In diesem Abschnitt wird jedes Modul der App erläutert. Zu diesem Zweck werden auch Codeausschnitte 
+und Screenshots angeführt und erklärt.
+\section{Hauptmenü}
+Das Hauptmenü dient als Einstiegspunkt in die App. Das heißt sobald der/die BenutzerIn die App startet
+landet er/sie sofort im Hauptmenü. Dieses gilt rein als Ausgangspunkt um die einzelnen Funktionalitäten
+der App aufrufen zu können. Das Hauptmenü besteht aus folgendenden Menüpunkten:
+
+\begin{description}
+	\item[Trainer] Webbasiertes Trainingssystem für das ein Konto benötigt wird. Abschnitt \ref{subsec:trainer} erläutert dieses Modul. 
+	\item[Üben] In unterschiedlichen Schwierigkeitsstufen anonym durchführbare Übung. Abschnitt \ref{subsec:excercise} erläutert dieses Modul.
+	\item[Hilfe] Kurzer Hilfetext zur App
+	\item[Einstellungen] Einstellungen wie zum Beispiel die Ausrichtung des Übertrages	
+\end{description}
+
+Da \enquote{Xcode} eine sehr komfortable Möglichkeit bietet diese Menüpunkte
+zu verklinken, hat das Hauptmenü auch keine weitere Funktionalität in Form von Programmcode. 
+In Abbildung \ref{fig:mainmenu} sehen sie einen Screenshot des Hauptmenüs. 
+\myfig{mainmenu}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot des Hauptmenüs.}%% caption
+  {Screenshot Hauptmenü.}%% optional (short) caption for table of figures
+  {fig:mainmenu}%% label
+
+\section{Trainer}
+\label{subsec:trainer}
+Der Trainer bildet im eigentlichen Sinn das Herzstück der App. Sobald der Trainer gestartet wird, 
+wird überprüft ob der/die BenutzerIn bereits Zugriff auf das Neuhold's System hat. Ist dies nicht der Fall
+muss sich der/die BenutzerIn über ein Webinterface für die Nutzung des Trainers registrieren. Sobald
+die Registrierung erfolgt ist, kann sich der/die Benutzerin am System einloggen. Abbildung \ref{fig:login}
+zeigt einen Screenshot der App auf dem die Registrierung bzw. der Login ersichtlich sind.
+
+\myfig{login}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot der Registrierungs bzw. des Logins.}%% caption
+  {Screenshot Login.}%% optional (short) caption for table of figures
+  {fig:login}%% label
+  
+Die gesamte Kommunikation zwischen App und Neuhold's Webservice erfolgt über \enquote{SOAP\footcite{http://www.w3.org/TR/soap9/}} Nachrichten.
+Das Nachrichtenformat für diesen Zweck ist \enquote{XML\footcite{http://www.w3.org/XML/}}. \enquote{SOAP} Nachrichten
+selbst zu erstellen und an das Webservice zu schicken wäre äußerst umständlich und fehleranfällig, weswegen
+hierzu ein Service namens \enquote{SudzC\footcite{http://sudzc.com}} verwendet wurde. 
+Dieses Service generiert aufgrund der SOAP Endpoint Definition automatisch Programmcode der beim 
+Programmieren der App aufgerufen werden kann und über diesen das Senden von SOAP Nachrichten 
+vereinfacht wird.
+
+Folgender Codeausschnitt \ref{listing:authXML} zeigt, wie eine SOAP Nachricht für die Authentifizierung aussieht. Der SOAP
+Endpoint für diese Nachricht ist \enquote{isUserAllowed}. Das Feld \enquote{username} wird im Klartext 
+übertragen, das Passwort im Feld \enquote{password} ist SHA-256 gehasht(Beschrieben in \cite{NSA2001}). Für die Nachvollziehbarkeit,
+auf welchem System der Additions -und Subtraktionstrainer ausgeführt wird, ist im Feld \enquote{idApp} die App ID
+der jeweiligen App einzutragen (iOS, Android, etc.). \enquote{hmacClient} ist ein Hash der sich aus Benutzername, gehashtem Password, App ID und App Key zusammensetzt.
+\begin{lstlisting}[caption=SOAP XML Nachricht zur Benutzer Authentifizierung, label=listing:authXML]
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://mathe.tugraz.at/~georg/Usermanager/public/soap">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:isUserAllowed soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <username xsi:type="xsd:string">?</username>
+         <password xsi:type="xsd:string">?</password>
+         <idApp xsi:type="xsd:int">?</idApp>
+         <hmacClient xsi:type="xsd:string">?</hmacClient>
+      </soap:isUserAllowed>
+   </soapenv:Body>
+</soapenv:Envelope>\end{lstlisting} 
+Codeausschnitt \ref{listing:hash} zeigt, wie der Hash für die Authentifizierung erstellt wird. Codezeilen
+20 und 21 zeigen den Zugriff auf die durch \enquote{SudzC} generierten Methoden zur SOAP Kommunikation.
+\begin{lstlisting}[caption=Objective-C Code zur Erstellung des Hashs, label=listing:hash]
+        const char *s = [pw cStringUsingEncoding:NSASCIIStringEncoding];
+        NSData *pwdata = [NSData dataWithBytes:s length:strlen(s)];
+        uint8_t digest[CC_SHA256_DIGEST_LENGTH] = {0};
+        CC_SHA256(pwdata.bytes, pwdata.length, digest);
+        NSData *out = [NSData dataWithBytes:digest length:CC_SHA256_DIGEST_LENGTH];
+        NSString *hash = [out description];
+        hash = [hash stringByReplacingOccurrencesOfString:@" " withString:@""];
+        hash = [hash stringByReplacingOccurrencesOfString:@"<" withString:@""];
+        hash = [hash stringByReplacingOccurrencesOfString:@">" withString:@""];
+        NSString *data = [NSString stringWithFormat:@"%@%@%@", uname, hash, @"12"];
+        const char *cKey = [key cStringUsingEncoding:NSASCIIStringEncoding];
+        const char *cData = [data cStringUsingEncoding:NSASCIIStringEncoding];
+        unsigned char cHMAC[CC_SHA256_DIGEST_LENGTH];
+        CCHmac(kCCHmacAlgSHA256, cKey, strlen(cKey), cData, strlen(cData), cHMAC);
+        NSData *outhmac = [NSData dataWithBytes:cHMAC length:CC_SHA256_DIGEST_LENGTH];
+        NSString *hmachash = [outhmac description];
+        hmachash = [hmachash stringByReplacingOccurrencesOfString:@" " withString:@""];
+        hmachash = [hmachash stringByReplacingOccurrencesOfString:@"<" withString:@""];
+        hmachash = [hmachash stringByReplacingOccurrencesOfString:@">" withString:@""];
+        adSubUsermanager_Soap_ManagementService *userManagerService = [[adSubUsermanager_Soap_ManagementService alloc] init];
+        [userManagerService isUserAllowed:self action:@selector(handleUMService:) username:uname password:hash idApp:12 hmacClient:hmachash];
+\end{lstlisting} 
+
+Bei erfolgreicher Authentifizierung wird der/die BenutzerIn nochmals auf einen Zwischenscreen geleitet auf 
+dem die Möglichkeit besteht sich wieder abzumelden bzw. mit dem Training zu beginnen. Abbildung \ref{fig:logout} zeigt
+den korrespondierenden Screenshot. Ergänzend sei hier erwähnt, dass die App sich den aktuellen Benutzer merkt, und diesen automatisch einloggt bis zu
+dem Zeitpunkt an dem sich der Benutzer vom System manuell über den Menüpunkt \enquote{Abmelden} vom System 
+ausloggt. Ob der/die BenutzerIn eingeloggt ist wird über \enquote{NSUserDefaults \footcite{https://developer.apple.com/library/mac/documentation/cocoa/Reference/Foundation/Classes/NSUserDefaults_Class/Reference/Reference.html}}
+gespeichert.
+\myfig{logout}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot des Logouts}%% caption
+  {Screenshot Logout.}%% optional (short) caption for table of figures
+  {fig:logout}%% label
+  
+Beim Start des Trainers wird die Rechenaufgabe wie in Abbildung \ref{fig:trainer} dargestellt. Auf diesem
+Screen wird dem/der BenutzerIn ein an seine/ihre Bedürfnisse bzw. Kenntnisse angepasste Rechenaufgabe
+dargestellt.
+\myfig{trainer}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot des Trainers}%% caption
+  {Screenshot Trainer.}%% optional (short) caption for table of figures
+  {fig:trainer}%% label
+Die Schwierigkeit dieser Rechenaufgabe wird von Neuhold's System auf Basis der bisherigen
+Rechenleistungen des Benutzers festgelegt und übermittelt. Es werden auf diesem Screen fünf Eingabefelder
+präsentiert die durch eine jeweilige Berührung editierbar sind. Die drei großen Eingabefelder repräsentieren
+die Eingabe des Ergebnisses für die jeweilige Stelle der Zehnerpotenz. Die darüberliegenden kleineren
+Eingabefelder stellen die Überträge beim Rechnen von der jeweilig einen auf die andere Zehnerpotenz dar.
+Die Position der Übertragsfelder kann je nach Wunsch über die erste Zahl oder unter die Zweite Zahl der übermittelten Rechnung 
+gesetzt werden. Dies ist über das Einstellungsmenü zu definieren. Durch Berühren des roten \enquote{X Symbols} werden
+alle bisher getätigten Eingabe gelöscht, und durch Berühren des grünen\enquote{Häkchen Symbols} wird die Eingabe 
+bestätigt und an das Webservice übermittelt. Der/die BenutzerIn erhält sofort Feedback ob eine Rechenaufgabe
+erfolgreich gelöst wurde. Abbildung \ref{fig:feedback} zeigt den Feedback Screen. 
+
+
+\myfig{feedback}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot des Feedbacks}%% caption
+  {Screenshot Feedback.}%% optional (short) caption for table of figures
+  {fig:feedback}%% label
+
+Ist die Übermittlung der Ergebnisse abgeschlossen wird sofort darauf 
+eine weitere Rechenaufgabe präsentiert. Dies geschieht so lange bis der/die BenutzerIn das \enquote{Stop Symbol} berührt. 
+Daraufhin landet der/die BenutzerIn wieder im Menü mit der Möglichkeit des Logouts bzw. eines erneuten 
+Trainingsdurchganges.
+
+Die Kommunikation mit dem Webservice im Zuge eines Rechendurchganges enthält mehrere Schritte, die im folgenden 
+Abschnitt \ref{subsec:communication} erläutert werden. 
+
+\subsection{Kommunikationsablauf mit Webservice}
+\label{subsec:communication}
+
+In diesem Abschnitt werden die einzelnen Schritte in der Kommunikation zwischen App und Webservice erläutert.
+
+\subsubsection{Anfordern einer Rechenaufgabe}
+Um für einen bestimmten Benutzer eine Rechenaufgabe zu erhalten muss das Webservice am Endpoint \enquote{getProblem}
+durch Übergabe der Benutzer-ID angesprochen werden. Codeausschnitt \ref{listing:getProblem} zeigt wie 
+ein solcher Request aussieht. Das Feld \enquote{userID} repräsentiert die Benutzer-ID.
+
+\begin{lstlisting}[caption=Anfordern einer Rechenaufgabe, label=listing:getProblem]
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://plusminus.tugraz.at/webservice">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:getProblem soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:int">1</userId>
+      </web:getProblem>
+   </soapenv:Body>
+</soapenv:Envelope>
+\end{lstlisting}
+
+\subsubsection{Erhalten einer Rechenaufgabe}
+Wurde im vorherigen Request eine gültige Benutzer-ID übergeben, bekommt man vom Webservice eine 
+Antwort mit der jeweiligen Rechenaufgabe. In welcher Form eine solche Rechenaufgabe vom Webservice übermittelt
+wird zeigt Codeausschnitt \ref{listing:getProblemAnswer}.
+
+\begin{lstlisting}[caption=Erhalten einer Rechenaufgabe, label=listing:getProblemAnswer]
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://plusminus.tugraz.at/webservice" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
+   <SOAP-ENV:Body>
+      <ns1:getProblemResponse>
+         <return xsi:type="ns1:WebserviceProblem">
+            <id xsi:type="xsd:int">681116</id>
+            <first xsi:type="xsd:int">6</first>
+            <second xsi:type="xsd:int">4</second>
+            <operator xsi:type="xsd:string">-</operator>
+         </return>
+      </ns1:getProblemResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+\end{lstlisting}
+
+Das Feld \enquote{id} enthält die eindeutige Identifikationsnummer der jeweiligen Rechenaufgabe die 
+in weiterer Folge zur Übermittlung des Ergebnisses wieder benötigt wird. In den 
+Feldern \enquote{first} bzw. \enquote{second} werden die für eine Addition bzw. Subtraktion benötigten 
+Operanden übertragen und im Feld \enquote{operator} wird der Operator übermittelt, in diesem Falle entweder
+\enquote{+} oder \enquote{-}. Diese Daten werden nach Erhalt geparsed und wie in Abbildung \ref{fig:trainer} in der App dargestellt.
+
+\subsubsection{Übermitteln des Ergebnisses}
+Sobald die Rechnung gelöst, und der Bestätigungs-Button berührt wurde, wird nun das Ergebnis wieder an das 
+Webservice übermittelt. Codeausschnitt \ref{listing:receiveResult} zeigt die zugehörige SOAP Nachricht.
+\begin{lstlisting}[caption=Übermitteln des Resultats, label=listing:receiveResult]
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://plusminus.tugraz.at/webservice">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:receiveResult soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <userId xsi:type="xsd:int">1</userId>
+         <problemId xsi:type="xsd:int">681116</problemId>
+         <result xsi:type="xsd:int">2</result>
+         <carry xsi:type="xsd:int">0</carry>
+         <result_pattern xsi:type="xsd:string">een</result_pattern>
+         <carry_pattern xsi:type="xsd:string">ee</carry_pattern>
+         <duration xsi:type="xsd:float">5</duration>
+      </web:receiveResult>
+   </soapenv:Body>
+</soapenv:Envelope>
+\end{lstlisting}
+
+Wie bereits erwähnt enthält das Feld \enquote{userID} die Benutzer Identifikationsnummer und das 
+Feld \enquote{problemID} die Rechnungs Identifikationsnummer. Im Feld \enquote{result} wird das
+Ergebnis des Benutzers übermittelt. Das Feld \enquote{carry} kann maximal zwei Ziffern lang sein 
+und enthält die vom Benutzer eingetragenen Zahlen in den jeweiligen Übertragsfeldern in der App.
+Die Einerstelle des \enquote{carry} Feldes in der Soapnachricht enthält den Übertrag der beim Rechnen 
+an der Einerstelle in der App entstanden ist und sinngemäß gilt das für die Zehnerstelle des \enquote{carry}
+Feldes. Wird kein Übertrag in der App eingetragen wird automatisch die Zahl null übertragen.
+
+Die Felder \enquote{result\_pattern} und \enquote{carry\_pattern} geben an in welches der Eingabefelder
+in der App der Benutzer eine Zahl eingetragen hat, bzw ob er das Eingabefeld leer stehen gelassen hat.
+Dargestellt wird das \enquote{result\_pattern} und das \enquote{carry\_pattern} als Folge der Buchstaben
+\enquote{e} bzw. \enquote{n}, wobei \enquote{e} für empty und \enquote{n} für number steht. Der Buchstabe
+im jeweiligen Pattern an der ganz rechten Stelle repräsentiert die Einerstelle, und der Buchstabe ganz
+links repräsentiert die Hunderterstelle in der App. Als letzts Feld wird \enquote{duration} übertragen, welches
+die benötigte Zeit zur Durchführung der jeweiligen Rechenaufgabe erfasst.
+
+\subsubsection{Erhalt der Lösung}
+Als Antwort auf die Übermittlung des Ergebnisses bekommt man vom Webservice die Nachricht in Codeausschnitt
+\ref{listing:receiveResultResponse}. 
+\begin{lstlisting}[caption=Antwort auf Übermittlung des Ergebnisses, label=listing:receiveResultResponse]
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://plusminus.tugraz.at/webservice" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
+   <SOAP-ENV:Body>
+      <ns1:receiveResultResponse>
+         <return xsi:type="xsd:boolean">true</return>
+      </ns1:receiveResultResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+\end{lstlisting}
+
+Das Feld \enquote{return} enthält entweder true oder false, je nach Erfolg.
+
+
+\section{Üben}
+\label{sec:excercise}
+
+Den zweiten großen Teil der App stellt der Übungsmodus dar. Über diesen kann der/die BenutzerIn 
+anonym an seinen eigenen Rechenfähigkeit arbeiten. Der Übungsmodus wird über das Hauptmenü aufgerufen 
+und bietet drei Schwierigkeitsgrade zur Übung von Additionen und Subtraktionen an. 
+Abbildung \ref{fig:difficulty} zeigt den Screen zur Auswahl des Schwierigkeitsgrades. Sobald eine 
+der drei Schwierigkeitsgrade ausgewählt wurde, startet der Übungsmodus auch sofort.
+\myfig{difficulty}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot des Schwierigkeitsgradauswahl im Übungsmodus}%% caption
+  {Screenshot Schwierigkeitsgrad.}%% optional (short) caption for table of figures
+  {fig:difficulty}%% label
+
+Die Rechenaufgaben im Übungsmodus unterliegen einigen Einschränkungen. Diese Einschränkungen wären:
+\begin{itemize}
+\item Das Ergebnis der Rechenaufgabe darf nicht negativ sein
+\item Das Ergebnis der Rechenaufgabe darf nicht größer als 1000 sein
+\item Rechenaufgaben in der Schwierigkeitsstufe \enquote{leicht} dürfen nur maximal einstellige Operanden enthalten
+\item Rechenaufgaben in der Schwierigkeitsstufe \enquote{mittel} dürfen nur maximal zweistellige Operanden enthalten
+\item Rechenaufgaben in der Schwierigkeitsstufe \enquote{schwer} dürfen nur maximal dreistellige Operanden enthalten
+\end{itemize}
+Aufgrund dieser Einschränkungen war es notwendig bei der Erstellung der Rechenaufgaben viele 
+Fälle zu untscheiden. Codeausschnit \ref{listing:problemGeneration} zeigt wie die Rechenaufgaben
+generiert werden.
+Zuerst wird zufällig ein erster Operand und zweiter Operand zwischen 0 und 999, und ein Operator 
+generiert. Aufgrund des Schwierigkeitsgrades wird nun entschieden, ob die jeweiligen Operanden durch
+100 für leichte Rechenaufgaben, durch 10 für mittelschwere Rechenaufgaben oder gar nicht für schwere
+Rechenaufgaben dividiert werden. Dadurch, dass mit Integerzahlen gerechnet wird, gibt es nur ganzzahlige
+Ergebnisse bei der Division und wir können das Ergebnis der Division sofort verwenden.
+Weiters wird nun entschieden, dass wenn der erste generierte Operand kleiner als der zweite generierte Operand 
+ist, es aufgrund unserer Einschränkungen nur eine Addition werden darf. Wenn wir nun mit einer 
+Addition weiterarbeiten und das Ergebnis der Addition aber größer als 1000 wäre müssen wir eine Kombination 
+zweier Operanden finden bei der die Summe der Operanden kleiner als 1000 ist. Dies geschieht im Zeile 22.
+Im weiteren Verlauf in Codeausschnitt \ref{listing:problemGeneration} geht es noch darum, die generierten
+Operanden in Strings umzuwandeln und aufzubereiten um sie in der App darstellen zu können.
+
+
+\begin{lstlisting}[caption=Generierung von Rechenaufgaben im Übungsmodus, label=listing:problemGeneration]
+    int plusMinus = (arc4random() % 2); // 0 or 1 for + or -
+    int firstNum = (arc4random() % 1000); // number between 0 and 999
+    int secondNum = (arc4random() % 1000); // number between 0 and 999
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    int difficultyLevel = [defaults integerForKey:@"excerciseDifficulty"]; //fetch difficultyLevel
+    
+    if(difficultyLevel == 1) { //easy
+        firstNum = firstNum / 100;  
+        secondNum = secondNum / 100;
+    } else if (difficultyLevel == 2) {//medium
+        firstNum = firstNum / 10;
+        secondNum = secondNum / 10;
+    }
+    
+    //if difficultylevel = 3, hard, nothing has to be divided
+    
+    if (firstNum < secondNum) //if first num is smaller than second it can only be a addition
+        plusMinus = 0;         //no negative results allowed
+    
+    if (plusMinus == 0 && (firstNum + secondNum) >= 1000) { // if it's an addition and result > 1000
+        while((firstNum + secondNum) > 1000) // find combinations of the two operands which are summed
+        {                                    //smaller than 1000
+            firstNum = (arc4random() % 1000);
+            secondNum = (arc4random() % 1000);
+        }
+        
+    }
+    NSString *firstNumString = [NSString stringWithFormat:@"%d", firstNum]; //convert number to strings
+    NSString *secondNumString = [NSString stringWithFormat:@"%d", secondNum]; //for presentation purposes
+    NSString *firstOnes = 0; //initialize with 0
+    NSString *firstTens = 0;
+    NSString *firstHundreds = 0;
+    NSString *secondOnes = 0;
+    NSString *secondTens = 0;
+    NSString *secondHundreds = 0;
+    if ([firstNumString length] == 3) { //if first number has 3 digits
+        firstOnes = [firstNumString substringWithRange:NSMakeRange(2, 1)]; // separate them correctly
+        firstTens = [firstNumString substringWithRange:NSMakeRange(1, 1)];
+        firstHundreds = [firstNumString substringWithRange:NSMakeRange(0, 1)];
+        
+    } else if ([firstNumString length] == 2) { // if first number has 2 digits
+        firstOnes = [firstNumString substringWithRange:NSMakeRange(1, 1)]; // separate them correctly
+        firstTens = [firstNumString substringWithRange:NSMakeRange(0, 1)];
+        firstHundreds = @""; //and empty hundreds field
+    } else {// if first number digits
+        
+        firstOnes = [firstNumString substringWithRange:NSMakeRange(0, 1)]; // separate them correctly
+        firstTens = @"";//and tens hundreds field
+        firstHundreds = @"";//and empty hundreds field
+    }
+    
+    //same stuff for the second number
+    
+    if ([secondNumString length] == 3) {
+        secondOnes = [secondNumString substringWithRange:NSMakeRange(2, 1)];
+        secondTens = [secondNumString substringWithRange:NSMakeRange(1, 1)];
+        secondHundreds = [secondNumString substringWithRange:NSMakeRange(0, 1)];
+        
+    } else if ([secondNumString length] == 2) {
+        secondOnes = [secondNumString substringWithRange:NSMakeRange(1, 1)];
+        secondTens = [secondNumString substringWithRange:NSMakeRange(0, 1)];
+        secondHundreds = @"";
+    } else {
+        
+        secondOnes = [secondNumString substringWithRange:NSMakeRange(0, 1)];
+        secondTens = @"";
+        secondHundreds = @"";
+    }
+
+    
+    //fill screen in app
+    self.firstOnes.text = firstOnes;
+    self.firstTens.text = firstTens;
+    self.firstHundreds.text = firstHundreds;
+    
+    self.secondOnes.text = secondOnes;
+    self.secondTens.text = secondTens;
+    self.secondHundreds.text = secondHundreds;
+    
+    //insert + or -
+    self.plusMinus.text = (plusMinus == 0) ? @"+" : @"-";
+    //calculate desired result for evaluation purposes
+    self.desiredResult = (plusMinus == 0) ? (firstNum + secondNum) : (firstNum - secondNum);
+\end{lstlisting}
+
+Die Darstellung der Rechenaufgaben im Übungsmodus sieht grundsätzlich gleich aus wie die Darstellung 
+im Trainingsmodus in Abbildung \ref{fig:trainer}. Im Unterschied zum Trainingsmodus bekommt der/die
+BenutzerIn nach Beendigung des Übungsmodus durch Berühren des Stop-Buttons eine Auswertung seiner 
+Übungsleistung dargestellt. Dazu wird die Anzahl der korrekt gelösten Übungsrechenaufgaben mitgeloggt.
+Abbildung \ref{fig:evaluation} zeigt eine beispielhafte Auswertung eines Übungsdurchlaufs.
+
+\myfig{evaluation}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot des Auswertungsscreens im Übungsmodus}%% caption
+  {Screenshot Auswertung.}%% optional (short) caption for table of figures
+  {fig:evaluation}%% label
+
+\section{Einstellungen}
+\label{sec:settings}
+Unter Einstellungen im Hauptmenü hat der/die BenutzerIn die Möglichkeit die Position des Übertragfeldes
+im Trainings -und Übungsmodus zu verändern. Im englischsprachigen Raum ist es üblich das Übertragfeld
+ober dem ersten Operanden zu positionieren. Im deutschsprachigen Raum ist das Übertragfeld gewöhnlich
+unter dem zweiten Operanden zu finden. Abbildung \ref{fig:settings} zeigt den Einstellungsscreen.
+\myfig{settings}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot des Einstellungsscreens}%% caption
+  {Screenshot Einstellungen.}%% optional (short) caption for table of figures
+  {fig:settings}%% label
 
 
 
-This is my text with an example Figure~\ref{fig:example} and example
-citation~\cite{StrunkWhite} or \textcite{Bringhurst1993}. And there is another
-\enquote{citation} which is located at the bottom\footcite{tagstore}.
+\section{Hilfe}
+\label{sec:help}
 
-\myfig{TU_Graz_Logo}%% filename in figures folder
-  {width=0.1\textwidth,height=0.1\textheight}%% maximum width/height, aspect ratio will be kept
-  {Example figure.}%% caption
-  {}%% optional (short) caption for table of figures
-  {fig:example}%% label
+Im Menüpunkt Hilfe bekommt der/die BenutzerIn eine kurze Erklärung der Funktionalität der App.
+Abbildung \ref{fig:help} zeigt den Hilfescreen.
+\myfig{help}%% filename in figures folder
+  {width=0.4\textwidth,height=0.4\textheight}%% maximum width/height, aspect ratio will be kept
+  {Screenshot des Hilfescreens}%% caption
+  {Screenshot Hilfe.}%% optional (short) caption for table of figures
+  {fig:help}%% label
+  
 
-Now you are able to write your own document. Always keep in mind: it's
-the \emph{content} that matters, not the form. But good typography is
-able to deliver the content much better than information set with bad
-typography. This template allows you to concentrate on writing good
-content while the form is done by the template definitions.
+  
+
+
+
 
 
 %% vim:foldmethod=expr

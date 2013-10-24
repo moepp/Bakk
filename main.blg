@@ -1,17 +1,34 @@
 [0] Config.pm:387> INFO - This is Biber 1.6
-[1] Config.pm:390> INFO - Logfile is 'main.blg'
-[100] biber-darwin:218> INFO - === Tue Sep 24, 2013, 10:51:22
-[101] Biber.pm:325> INFO - Reading 'main.bcf'
-[192] Biber.pm:623> INFO - Found 15 citekeys in bib section 0
-[230] Biber.pm:2995> INFO - Processing section 0
-[249] Biber.pm:3129> INFO - Looking for bibtex format file 'references-biblatex.bib' for section 0
-[251] bibtex.pm:898> INFO - Decoding LaTeX character macros into UTF-8
-[255] bibtex.pm:775> INFO - Found BibTeX data source 'references-biblatex.bib'
-[294] Utils.pm:169> WARN - The field 'url' in entry 'Neuhold2013' cannot be null, deleting it
-[295] Utils.pm:169> WARN - The field 'publisher' in entry 'Bringhurst1993' cannot be null, deleting it
-[442] Biber.pm:2881> INFO - Overriding locale 'en_US.UTF-8' default tailoring 'variable = shifted' with 'variable = non-ignorable'
-[442] Biber.pm:2887> INFO - Sorting 'entry' list 'nyt' keys
-[443] Biber.pm:2891> INFO - No sort tailoring available for locale 'en_US.UTF-8'
-[603] bbl.pm:472> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[605] bbl.pm:545> INFO - Output to main.bbl
-[605] Biber.pm:105> INFO - WARNINGS: 2
+[0] Config.pm:390> INFO - Logfile is 'main.blg'
+[117] biber-darwin:218> INFO - === Thu Oct 24, 2013, 13:12:09
+[118] Biber.pm:325> INFO - Reading 'main.bcf'
+[204] Biber.pm:623> INFO - Found 33 citekeys in bib section 0
+[217] Biber.pm:2995> INFO - Processing section 0
+[235] Biber.pm:3129> INFO - Looking for bibtex format file 'references-biblatex.bib' for section 0
+[237] bibtex.pm:898> INFO - Decoding LaTeX character macros into UTF-8
+[241] bibtex.pm:775> INFO - Found BibTeX data source 'references-biblatex.bib'
+[267] Utils.pm:169> WARN - I didn't find a database entry for 'https://itunes.apple.com/de/genre/ios/id36?mt=8' (section 0)
+[267] Utils.pm:169> WARN - I didn't find a database entry for 'https://itunes.apple.com/de/app/mathboard/id373909837?mt=8' (section 0)
+[267] Utils.pm:169> WARN - I didn't find a database entry for 'https://itunes.apple.com/de/app/addition-master-mathematik/id672669932?mt=8' (section 0)
+[267] Utils.pm:169> WARN - I didn't find a database entry for 'https://itunes.apple.com/de/app/addition-!/id447548669?mt=8' (section 0)
+[268] Utils.pm:169> WARN - I didn't find a database entry for 'https://itunes.apple.com/de/app/subtraction-!/id447548515?mt=8' (section 0)
+[268] Utils.pm:169> WARN - I didn't find a database entry for 'https://itunes.apple.com/de/app/add-sub/id693077439?mt=8' (section 0)
+[268] Utils.pm:169> WARN - I didn't find a database entry for 'https://itunes.apple.com/de/app/add-subtract-springbird-mathe/id601505771?mt=8' (section 0)
+[268] Utils.pm:169> WARN - I didn't find a database entry for 'https://itunes.apple.com/de/app/addition-subtraction-for-kids/id426907035?mt=8' (section 0)
+[268] Utils.pm:169> WARN - I didn't find a database entry for 'https://itunes.apple.com/de/app/add-sub-k-1/id486199509?mt=8' (section 0)
+[268] Utils.pm:169> WARN - I didn't find a database entry for 'https://itunes.apple.com/de/app/addition-subtraction/id542109601?mt=8' (section 0)
+[268] Utils.pm:169> WARN - I didn't find a database entry for 'https://itunes.apple.com/de/app/subtract-with-fun/id699563137?mt=8' (section 0)
+[268] Utils.pm:169> WARN - I didn't find a database entry for 'http://developer.apple.com/xcode/ [Zugriff am 24.10.2013]' (section 0)
+[269] Utils.pm:169> WARN - I didn't find a database entry for 'http://www.gnu.org/software/gnustep/resources/documentation/Developer/Base/ProgrammingManual/manual_toc.html [Zugriff am 24.10.2013]' (section 0)
+[269] Utils.pm:169> WARN - I didn't find a database entry for 'http://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/ [Zugriff am 24.10.2013]' (section 0)
+[269] Utils.pm:169> WARN - I didn't find a database entry for 'http://www.w3.org/TR/soap9/' (section 0)
+[269] Utils.pm:169> WARN - I didn't find a database entry for 'http://www.w3.org/XML/' (section 0)
+[269] Utils.pm:169> WARN - I didn't find a database entry for 'http://sudzc.com' (section 0)
+[282] Utils.pm:169> WARN - The field 'url' in entry 'Neuhold2013' cannot be null, deleting it
+[283] Utils.pm:169> WARN - The field 'publisher' in entry 'Bringhurst1993' cannot be null, deleting it
+[424] Biber.pm:2881> INFO - Overriding locale 'en_US.UTF-8' default tailoring 'variable = shifted' with 'variable = non-ignorable'
+[424] Biber.pm:2887> INFO - Sorting 'entry' list 'nyt' keys
+[424] Biber.pm:2891> INFO - No sort tailoring available for locale 'en_US.UTF-8'
+[591] bbl.pm:472> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[594] bbl.pm:545> INFO - Output to main.bbl
+[594] Biber.pm:105> INFO - WARNINGS: 19

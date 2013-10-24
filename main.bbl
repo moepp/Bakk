@@ -171,6 +171,27 @@
       \field{title}{Adaptives Informationssystem zur Erlernung mehrstelliger Addition und Subtraktion}
       \field{year}{2013}
     \endentry
+    \entry{NSA2001}{online}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=54af60422aadb2c3de1d87ecde30700e}{NSA}{N\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=54af60422aadb2c3de1d87ecde30700e}{NSA}{N\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{54af60422aadb2c3de1d87ecde30700e}
+      \strng{fullhash}{54af60422aadb2c3de1d87ecde30700e}
+      \field{sortinit}{N}
+      \field{labelyear}{2001}
+      \field{labelmonth}{07}
+      \field{labeltitle}{Descriptions of SHA-256, SHA-384, and SHA-512}
+      \field{howpublished}{NSA, U.S.}
+      \field{month}{07}
+      \field{title}{Descriptions of SHA-256, SHA-384, and SHA-512}
+      \field{year}{2001}
+      \verb{url}
+      \verb http://csrc.nist.gov/groups/STM/cavp/documents/shs/sha256-384-512.pdf
+      \endverb
+    \endentry
     \entry{Phillips-HowGetPhD}{book}{}
       \name{labelname}{2}{}{%
         {{uniquename=0,hash=04d1641ad613dbf31c50f5d4ff239d0f}{Phillips}{P\bibinitperiod}{Estelle\bibnamedelima M.}{E\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
@@ -315,6 +336,23 @@
       \field{year}{2004}
     \endentry
   \endsortlist
+  \missing{http://www.w3.org/TR/soap9/}
+  \missing{https://itunes.apple.com/de/app/addition-master-mathematik/id672669932?mt=8}
+  \missing{http://developer.apple.com/xcode/ [Zugriff am 24.10.2013]}
+  \missing{http://www.w3.org/XML/}
+  \missing{https://itunes.apple.com/de/app/addition-!/id447548669?mt=8}
+  \missing{https://itunes.apple.com/de/app/mathboard/id373909837?mt=8}
+  \missing{https://itunes.apple.com/de/app/subtract-with-fun/id699563137?mt=8}
+  \missing{https://itunes.apple.com/de/app/add-sub-k-1/id486199509?mt=8}
+  \missing{https://itunes.apple.com/de/app/subtraction-!/id447548515?mt=8}
+  \missing{https://itunes.apple.com/de/app/addition-subtraction-for-kids/id426907035?mt=8}
+  \missing{https://itunes.apple.com/de/genre/ios/id36?mt=8}
+  \missing{http://sudzc.com}
+  \missing{http://www.gnu.org/software/gnustep/resources/documentation/Developer/Base/ProgrammingManual/manual_toc.html [Zugriff am 24.10.2013]}
+  \missing{https://itunes.apple.com/de/app/addition-subtraction/id542109601?mt=8}
+  \missing{https://itunes.apple.com/de/app/add-sub/id693077439?mt=8}
+  \missing{https://itunes.apple.com/de/app/add-subtract-springbird-mathe/id601505771?mt=8}
+  \missing{http://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/ [Zugriff am 24.10.2013]}
 \endrefsection
 \endinput
 
