@@ -26,24 +26,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.1}Kommunikationsablauf mit Webservice}{17}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Anfordern einer Rechenaufgabe}{18}{section*.7}
+\contentsline {subsubsection}{Anfordern einer Rechenaufgabe}{18}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Erhalten einer Rechenaufgabe}{19}{section*.8}
+\contentsline {subsubsection}{Erhalten einer Rechenaufgabe}{20}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\IeC {\"U}bermitteln des Ergebnisses}{19}{section*.9}
+\contentsline {subsubsection}{\IeC {\"U}bermitteln des Ergebnisses}{21}{section*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Erhalt der L\IeC {\"o}sung}{21}{section*.10}
+\contentsline {subsubsection}{Erhalt der L\IeC {\"o}sung}{22}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}\IeC {\"U}ben}{21}{section.3.3}
+\contentsline {section}{\numberline {3.3}\IeC {\"U}ben}{22}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Einstellungen}{26}{section.3.4}
+\contentsline {section}{\numberline {3.4}Einstellungen}{27}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Hilfe}{26}{section.3.5}
+\contentsline {section}{\numberline {3.5}Hilfe}{28}{section.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Diskussion}{28}{chapter.4}
+\contentsline {chapter}{\numberline {4}Diskussion}{30}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Zusammenfassung}{29}{chapter.5}
+\contentsline {chapter}{\numberline {5}Zusammenfassung und Ausblick}{32}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Ausblick}{30}{chapter.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Literatur}{32}{appendix*.12}
+\contentsline {chapter}{Literatur}{35}{appendix*.13}

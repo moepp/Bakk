@@ -6,25 +6,47 @@
 \chapter{Diskussion}
 \label{chap:disc}
 
-blabla
+Das folgende Kapitel geht auf die Vorteile und auch auf Defizite der entwickelten App ein und diskutiert
+Erweiterungsmöglichkeiten der App, die im Rahmen der Entwicklung nicht berücksichtigt wurden. 
+
+Der Fokus der Entwicklung, der in dieser Arbeit vorgestellten App sollte deutlich erkennbar sein, nämlich
+die Klarheit und Einfachheit in der Bedienung und Darstellung der Inhalte. Die Umsetzung der App in der 
+beschriebenen Art und Weise ist mehreren Tatsachen geschuldet. Zum einen gelten als Adressaten der 
+App vor allem Kinder im Volksschulalter, die entweder gerade beim Erlernen der Grundrechenarten sind,
+oder Defizite dabei aufweisen, und zum anderen die mobile Plattform selbst. Da Schüler oft schon zu 
+rechnen beginnen bevor sie überhaupt lesen können, wurde der Aufbau und das Design der App so gewählt,
+dass man eigentlich auch ohne lesen zu können die App bedienen kann. Um Kinder zu ermutigen sich mit 
+dieser App zu befassen wurde auch der Fokus im Design auf kindliche Symbole und Grafiken gelegt. 
+Hierbei sei erwähnt, dass das grafische Design der App von zwei Schülerinnen der Ortweinschule Graz entwickelt wurde.
+Zum anderen gelten bei der Erstellung von Apps für Apples mobiles Betriebssystem iOS gewisse 
+Richtlinien\footcite{https://developer.apple.com/library/ios/documentation/userexperience/conceptual/mobilehig/}
+die einzuhalten sind. Diese schränken den Entwickler ein, zu komplexe User Interfaces zu entwerfen, 
+um so die Bedienung der App einfach und konsistent über alle Bildschirme zu halten.
+
+Der Additions- und Subtraktionstrainer dient einzig und allein der Darstellung von Rechenaufgaben. Diese
+kommen wie bereits in Abschnitt \ref{subsec:trainer} erwähnt entweder von Neuhold's Webservice, oder
+werden, wie Abschnitt \ref{sec:excercise} erläutert, von der App nach gewissen Kriterien generiert.
+Als Erweiterung dieser App, wäre es durchaus denkbar einen Menüpunkt einzubauen, über den
+man eine Statistik einsehen kann. Denkbar hierbei wäre zum Beispiel anzuzeigen, wieviel Prozent 
+aller gestellten Rechenaufgaben vom Schüler korrekt gelöst wurden, oder weiters eine grafische
+Darstellung wieviel Prozent der Rechenaufgaben mit steigendem Schwierigkeitsgrad erfüllt wurden. 
+Abbildung \ref{fig:success_calculations} zeigt wie so ein Diagramm aussehen könnte.
+
+\myfig{success_calculations}%% filename in figures folder
+  {width=1\textwidth,height=1\textheight}%% maximum width/height, aspect ratio will be kept
+  {Statistik über die Leistung des/der SchülerIn}%% caption
+  {Statistik über die Leistung des/der SchülerIn}%% optional (short) caption for table of figures
+  {fig:success_calculations}%% label
 
 
-
-This is my text with an example Figure~\ref{fig:example} and example
-citation~\cite{StrunkWhite} or \textcite{Bringhurst1993}. And there is another
-\enquote{citation} which is located at the bottom\footcite{tagstore}.
-
-\myfig{TU_Graz_Logo}%% filename in figures folder
-  {width=0.1\textwidth,height=0.1\textheight}%% maximum width/height, aspect ratio will be kept
-  {Example figure.}%% caption
-  {}%% optional (short) caption for table of figures
-  {fig:example}%% label
-
-Now you are able to write your own document. Always keep in mind: it's
-the \emph{content} that matters, not the form. But good typography is
-able to deliver the content much better than information set with bad
-typography. This template allows you to concentrate on writing good
-content while the form is done by the template definitions.
+Vorstellbar wäre auch ein textueller Hinweis(zB. \enquote{Du solltest zweistellige Subtraktionen noch 
+etwas üben denn du weißt ja, Übung macht den Meister}), der auf Wunsch in der App angezeigt wird, über die
+Schwerpunkte die sich ein Schüler beim Üben legen sollte. Um diese gerade diskutierten Erweiterungen 
+umzusetzen Bedarf es jedoch Erweiterungen an Neuhold's Webservice, denn wie bereits
+erwähnt speichert die App keinen Verlauf der Rechenerfolge des Benutzers. Da diese Statistiken im 
+Sytem jedoch vorliegen, dürfte es keine größeren Schwierigkeiten bereiten weitere Schnittstellen
+des Webservice für die App bereitzustellen.
+Eine weitere vorstellbare Ergänzung in der App wäre eine Rangliste für den Übungsmodus.
 
 
 %% vim:foldmethod=expr

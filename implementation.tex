@@ -7,21 +7,21 @@
 \label{chap:impl}
 
 Das folgende Kapitel beschäftigt sich mit der technischen Umsetzung und einer Erläuterung der einzelnen
-Module des Additions -und Subtraktionstrainers. Zur Erstellung der App wurde die von Apple integrierte Entwicklungsumgebung 
+Module des Additions- und Subtraktionstrainers. Zur Erstellung der App wurde die von Apple integrierte Entwicklungsumgebung 
 \enquote{Xcode\footcite{http://developer.apple.com/xcode/ [Zugriff am 24.10.2013]}} in der Version \enquote{4.6.2} verwendet um die App zu schreiben.
 Die zu diesem Zweck verwendete Programmiersprache ist zum Großteil 
 \enquote{Ojective-C\footcite{http://www.gnu.org/software/gnustep/resources/documentation/Developer/Base/ProgrammingManual/manual_toc.html [Zugriff am 24.10.2013]}} die als
 objektorientierte Erweiterung der Programmiersprache \enquote{C} angesehen wird.
 
-Der Aufbau der Addition -und Subtraktionstrainer App wurde sehr modular gestaltet. Durch die Verwendung 
+Der Aufbau der Addition- und Subtraktionstrainer App wurde sehr modular gestaltet. Durch die Verwendung 
 von \enquote{ViewControllern \footcite{http://developer.apple.com/library/ios/documentation/uikit/reference/UIViewController_Class/ [Zugriff am 24.10.2013]}}
 lässt sich dieser modulare Aufbau sauber beibehalten, was die Erweiterung der App vereinfacht.
 
-Wegen dieser Modularisierung der App werden im folgenden Abschnitt \ref{sec:modules} die technischen Einzelheiten pro Modul erläutert.
+Wegen dieser Modularisierung der App werden in den folgenden Abschnitten die technischen Einzelheiten pro Modul erläutert.
 %\section{Module}
 %\label{sec:modules}
-In diesem Abschnitt wird jedes Modul der App erläutert. Zu diesem Zweck werden auch Codeausschnitte 
-und Screenshots angeführt und erklärt.
+%In diesem Abschnitt wird jedes Modul der App erläutert. Zu diesem Zweck werden auch Codeausschnitte 
+%und Screenshots angeführt und erklärt.
 \section{Hauptmenü}
 Das Hauptmenü dient als Einstiegspunkt in die App. Das heißt sobald der/die BenutzerIn die App startet
 landet er/sie sofort im Hauptmenü. Dieses gilt rein als Ausgangspunkt um die einzelnen Funktionalitäten
@@ -158,6 +158,14 @@ Abschnitt \ref{subsec:communication} erläutert werden.
 \label{subsec:communication}
 
 In diesem Abschnitt werden die einzelnen Schritte in der Kommunikation zwischen App und Webservice erläutert.
+Abbildung \ref{fig:communicationchart} zeigt in einem abgewandelten Sequenzdiagramm wie eine erfolgreiche Kommunikation
+mit dem Webservice abläuft. Ergänzend dazu werden in den folgenden Abschnitten Quelltextschnipsel
+zur Erklärung des Kommunikationsablaufs verwendet.
+\myfig{communicationchart}%% filename in figures folder
+  {width=1\textwidth,height=1\textheight,trim=0 220 0 0}%% maximum width/height, aspect ratio will be kept
+  {Ablauf der Kommunikation mit dem Webservice}%% caption
+  {Kommunikation Webservice}%% optional (short) caption for table of figures
+  {fig:communicationchart}%% label
 
 \subsubsection{Anfordern einer Rechenaufgabe}
 Um für einen bestimmten Benutzer eine Rechenaufgabe zu erhalten muss das Webservice am Endpoint \enquote{getProblem}
@@ -286,7 +294,7 @@ Ergebnisse bei der Division und wir können das Ergebnis der Division sofort ver
 Weiters wird nun entschieden, dass wenn der erste generierte Operand kleiner als der zweite generierte Operand 
 ist, es aufgrund unserer Einschränkungen nur eine Addition werden darf. Wenn wir nun mit einer 
 Addition weiterarbeiten und das Ergebnis der Addition aber größer als 1000 wäre müssen wir eine Kombination 
-zweier Operanden finden bei der die Summe der Operanden kleiner als 1000 ist. Dies geschieht im Zeile 22.
+zweier Operanden finden bei der die Summe der Operanden kleiner als 1000 ist. Dies geschieht in Zeile 22.
 Im weiteren Verlauf in Codeausschnitt \ref{listing:problemGeneration} geht es noch darum, die generierten
 Operanden in Strings umzuwandeln und aufzubereiten um sie in der App darstellen zu können.
 

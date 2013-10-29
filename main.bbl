@@ -19,138 +19,48 @@
 
 \refsection{0}
   \sortlist{entry}{nyt}
-    \entry{KeithThesis}{online}{}
-      \name{labelname}{1}{}{%
-        {{uniquename=0,hash=3fa9244f0a97ed2794497a59d2e69926}{Andrews}{A\bibinitperiod}{Keith}{K\bibinitperiod}{}{}{}{}}%
+    \entry{Brown2010}{online}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=aafe398ddb0576b78f9788ce74154137}{Brown}{B\bibinitperiod}{Malcolm}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=030059c802579f420ca70ca00ffaf376}{Diaz}{D\bibinitperiod}{Veronica}{V\bibinitperiod}{}{}{}{}}%
       }
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=3fa9244f0a97ed2794497a59d2e69926}{Andrews}{A\bibinitperiod}{Keith}{K\bibinitperiod}{}{}{}{}}%
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=aafe398ddb0576b78f9788ce74154137}{Brown}{B\bibinitperiod}{Malcolm}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=030059c802579f420ca70ca00ffaf376}{Diaz}{D\bibinitperiod}{Veronica}{V\bibinitperiod}{}{}{}{}}%
       }
-      \strng{namehash}{3fa9244f0a97ed2794497a59d2e69926}
-      \strng{fullhash}{3fa9244f0a97ed2794497a59d2e69926}
-      \field{sortinit}{A}
-      \field{labelyear}{2011}
-      \field{labelmonth}{12}
-      \field{labeltitle}{Writing a Thesis: Guidelines for Writing a Master's Thesis in Computer Science}
-      \field{howpublished}{Graz University of Technology, Austria}
-      \field{month}{12}
-      \field{title}{Writing a Thesis: Guidelines for Writing a Master's Thesis in Computer Science}
-      \field{year}{2011}
-      \verb{url}
-      \verb http://ftp.iicm.edu/pub/keith/thesis/
-      \endverb
-    \endentry
-    \entry{Bringhurst1993}{book}{}
-      \name{labelname}{1}{}{%
-        {{uniquename=0,hash=26e95fb42484f0ba33bccaf28955982e}{Bringhurst}{B\bibinitperiod}{Robert}{R\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=26e95fb42484f0ba33bccaf28955982e}{Bringhurst}{B\bibinitperiod}{Robert}{R\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{26e95fb42484f0ba33bccaf28955982e}
-      \strng{fullhash}{26e95fb42484f0ba33bccaf28955982e}
+      \strng{namehash}{f4bae1a9bfb81d1ca0666d98f3cd4f03}
+      \strng{fullhash}{f4bae1a9bfb81d1ca0666d98f3cd4f03}
       \field{sortinit}{B}
-      \field{labelyear}{1993}
-      \field{labeltitle}{The Elements of Typographic Style}
-      \field{edition}{first edition}
-      \field{title}{The Elements of Typographic Style}
-      \field{year}{1993}
-    \endentry
-    \entry{DictChemnitz}{online}{}
-      \name{labelname}{1}{}{%
-        {{uniquename=0,hash=7e7a7b3317a72493b9193a11b21847c5}{Chemnitz}{C\bibinitperiod}{TU}{T\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=7e7a7b3317a72493b9193a11b21847c5}{Chemnitz}{C\bibinitperiod}{TU}{T\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{7e7a7b3317a72493b9193a11b21847c5}
-      \strng{fullhash}{7e7a7b3317a72493b9193a11b21847c5}
-      \field{sortinit}{C}
-      \field{labelyear}{2004}
-      \field{labeltitle}{German-English Dictionary}
-      \field{title}{German-English Dictionary}
-      \field{year}{2004}
+      \field{labelyear}{2010}
+      \field{labelmonth}{05}
+      \field{labeltitle}{Mobile Learning: Context and Prospects}
+      \field{howpublished}{Educause Learning Initiative}
+      \field{month}{05}
+      \field{title}{Mobile Learning: Context and Prospects}
+      \field{year}{2010}
       \verb{url}
-      \verb http://dict.tu-chemnitz.de/
+      \verb https://net.educause.edu/ir/library/pdf/ELI3022.pdf
       \endverb
     \endentry
-    \entry{DictionaryCom}{online}{}
+    \entry{Ebner2013}{online}{}
       \name{labelname}{1}{}{%
-        {{uniquename=0,hash=afd929e10da5dc985755844e32ba78cb}{dictionary.com}{d\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=5c1e37bddb3178581978b467dea5df20}{Ebner}{E\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
       }
       \name{author}{1}{}{%
-        {{uniquename=0,hash=afd929e10da5dc985755844e32ba78cb}{dictionary.com}{d\bibinitperiod}{}{}{}{}{}{}}%
+        {{uniquename=0,hash=5c1e37bddb3178581978b467dea5df20}{Ebner}{E\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
       }
-      \strng{namehash}{afd929e10da5dc985755844e32ba78cb}
-      \strng{fullhash}{afd929e10da5dc985755844e32ba78cb}
-      \field{sortinit}{d}
-      \field{labelyear}{2004}
-      \field{labeltitle}{dictionary.com}
-      \field{title}{dictionary.com}
-      \field{year}{2004}
+      \strng{namehash}{5c1e37bddb3178581978b467dea5df20}
+      \strng{fullhash}{5c1e37bddb3178581978b467dea5df20}
+      \field{sortinit}{E}
+      \field{labelyear}{2013}
+      \field{labelmonth}{05}
+      \field{labeltitle}{Lehrbuch für Lernen und Lehren mit Technologien (2. Auflage)}
+      \field{howpublished}{Graz University of Technology}
+      \field{month}{05}
+      \field{title}{Lehrbuch für Lernen und Lehren mit Technologien (2. Auflage)}
+      \field{year}{2013}
       \verb{url}
-      \verb http://dictionary.com/
-      \endverb
-    \endentry
-    \entry{BugsInWriting}{book}{}
-      \name{labelname}{1}{}{%
-        {{uniquename=0,hash=0b65137da9c4735d4847e827cfa81ef8}{Dupré}{D\bibinitperiod}{Lyn}{L\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=0b65137da9c4735d4847e827cfa81ef8}{Dupré}{D\bibinitperiod}{Lyn}{L\bibinitperiod}{}{}{}{}}%
-      }
-      \list{publisher}{1}{%
-        {Addison-Wesley}%
-      }
-      \strng{namehash}{0b65137da9c4735d4847e827cfa81ef8}
-      \strng{fullhash}{0b65137da9c4735d4847e827cfa81ef8}
-      \field{sortinit}{D}
-      \field{labelyear}{1998}
-      \field{labeltitle}{Bugs in Writing: A Guide to Debugging Your Prose}
-      \field{edition}{Second}
-      \field{isbn}{020137921X}
-      \field{title}{Bugs in Writing: A Guide to Debugging Your Prose}
-      \field{year}{1998}
-    \endentry
-    \entry{DictLeoOrg}{online}{}
-      \name{labelname}{1}{}{%
-        {{uniquename=0,hash=550eadb88a230018bf043d1b6ad15863}{Leo}{L\bibinitperiod}{}{}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=550eadb88a230018bf043d1b6ad15863}{Leo}{L\bibinitperiod}{}{}{}{}{}{}}%
-      }
-      \strng{namehash}{550eadb88a230018bf043d1b6ad15863}
-      \strng{fullhash}{550eadb88a230018bf043d1b6ad15863}
-      \field{sortinit}{L}
-      \field{labelyear}{2004}
-      \field{labeltitle}{Leo English-German Dictionary}
-      \field{title}{Leo English-German Dictionary}
-      \field{year}{2004}
-      \verb{url}
-      \verb http://dict.leo.org/
-      \endverb
-    \endentry
-    \entry{NASAGuide}{booklet}{}
-      \name{labelname}{1}{}{%
-        {{uniquename=0,hash=801c6f7a5dcc35fb7d7cc7fdc2c085a0}{McCaskill}{M\bibinitperiod}{Mary\bibnamedelima K.}{M\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=801c6f7a5dcc35fb7d7cc7fdc2c085a0}{McCaskill}{M\bibinitperiod}{Mary\bibnamedelima K.}{M\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{801c6f7a5dcc35fb7d7cc7fdc2c085a0}
-      \strng{fullhash}{801c6f7a5dcc35fb7d7cc7fdc2c085a0}
-      \field{sortinit}{M}
-      \field{labelyear}{1998}
-      \field{labelmonth}{08}
-      \field{labelday}{3}
-      \field{labeltitle}{Grammar, Punctuation, and Capitalization: A Handbook for Technical Writers and Editors}
-      \field{day}{3}
-      \field{howpublished}{NASA Langley Research Center SP-7084}
-      \field{month}{08}
-      \field{title}{Grammar, Punctuation, and Capitalization: A Handbook for Technical Writers and Editors}
-      \field{year}{1998}
-      \verb{url}
-      \verb http://stipo.larc.nasa.gov/sp7084/
+      \verb http://l3t.tugraz.at/index.php/LehrbuchEbner10/pod/current
       \endverb
     \endentry
     \entry{Neuhold2013}{online}{}
@@ -192,149 +102,6 @@
       \verb http://csrc.nist.gov/groups/STM/cavp/documents/shs/sha256-384-512.pdf
       \endverb
     \endentry
-    \entry{Phillips-HowGetPhD}{book}{}
-      \name{labelname}{2}{}{%
-        {{uniquename=0,hash=04d1641ad613dbf31c50f5d4ff239d0f}{Phillips}{P\bibinitperiod}{Estelle\bibnamedelima M.}{E\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=4edc7a0819c9b2436c2fcf28904f97d9}{Pugh}{P\bibinitperiod}{Derek\bibnamedelima S.}{D\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{2}{}{%
-        {{uniquename=0,hash=04d1641ad613dbf31c50f5d4ff239d0f}{Phillips}{P\bibinitperiod}{Estelle\bibnamedelima M.}{E\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=4edc7a0819c9b2436c2fcf28904f97d9}{Pugh}{P\bibinitperiod}{Derek\bibnamedelima S.}{D\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
-      }
-      \list{publisher}{1}{%
-        {Open University Press}%
-      }
-      \strng{namehash}{99f7203ceaf5e2c0c120d3ce1c179a91}
-      \strng{fullhash}{99f7203ceaf5e2c0c120d3ce1c179a91}
-      \field{sortinit}{P}
-      \field{labelyear}{2005}
-      \field{labeltitle}{How to Get a PhD}
-      \field{edition}{Fourth}
-      \field{isbn}{0335216846}
-      \field{title}{How to Get a PhD}
-      \field{year}{2005}
-    \endentry
-    \entry{RogetII}{online}{}
-      \name{labelname}{1}{}{%
-        {{uniquename=0,hash=953877d09388b0d117a15c3ca8c7baf1}{Roget}{R\bibinitperiod}{}{}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=953877d09388b0d117a15c3ca8c7baf1}{Roget}{R\bibinitperiod}{}{}{}{}{}{}}%
-      }
-      \strng{namehash}{953877d09388b0d117a15c3ca8c7baf1}
-      \strng{fullhash}{953877d09388b0d117a15c3ca8c7baf1}
-      \field{sortinit}{R}
-      \field{labelyear}{1995}
-      \field{labeltitle}{Roget's II: The New Thesaurus}
-      \field{edition}{Third}
-      \field{title}{Roget's II: The New Thesaurus}
-      \field{year}{1995}
-      \verb{url}
-      \verb http://www.bartleby.com/62/
-      \endverb
-    \endentry
-    \entry{Roget}{online}{}
-      \name{labelname}{1}{}{%
-        {{uniquename=0,hash=953877d09388b0d117a15c3ca8c7baf1}{Roget}{R\bibinitperiod}{}{}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=953877d09388b0d117a15c3ca8c7baf1}{Roget}{R\bibinitperiod}{}{}{}{}{}{}}%
-      }
-      \strng{namehash}{953877d09388b0d117a15c3ca8c7baf1}
-      \strng{fullhash}{953877d09388b0d117a15c3ca8c7baf1}
-      \field{sortinit}{R}
-      \field{labelyear}{2004}
-      \field{labeltitle}{Roget's Interactive Thesaurus}
-      \field{title}{Roget's Interactive Thesaurus}
-      \field{year}{2004}
-      \verb{url}
-      \verb http://www.thesaurus.com/
-      \endverb
-    \endentry
-    \entry{Strunk}{booklet}{}
-      \name{labelname}{1}{}{%
-        {{uniquename=0,hash=6d7e0c9893708098ab7f40ed19d37612}{Strunk}{S\bibinitperiod}{William}{W\bibinitperiod}{}{}{Jr}{J\bibinitperiod}}%
-      }
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=6d7e0c9893708098ab7f40ed19d37612}{Strunk}{S\bibinitperiod}{William}{W\bibinitperiod}{}{}{Jr}{J\bibinitperiod}}%
-      }
-      \strng{namehash}{6d7e0c9893708098ab7f40ed19d37612}
-      \strng{fullhash}{6d7e0c9893708098ab7f40ed19d37612}
-      \field{sortinit}{S}
-      \field{labelyear}{1918}
-      \field{labeltitle}{The Elements of Style}
-      \field{edition}{First}
-      \field{title}{The Elements of Style}
-      \field{year}{1918}
-      \verb{url}
-      \verb http://www.bartleby.com/141/
-      \endverb
-    \endentry
-    \entry{StrunkWhite}{book}{}
-      \name{labelname}{2}{}{%
-        {{uniquename=0,hash=6d7e0c9893708098ab7f40ed19d37612}{Strunk}{S\bibinitperiod}{William}{W\bibinitperiod}{}{}{Jr}{J\bibinitperiod}}%
-        {{uniquename=0,hash=492c9377c245efb97227dbac50005aa7}{White}{W\bibinitperiod}{Elwyn\bibnamedelima Brooks}{E\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{2}{}{%
-        {{uniquename=0,hash=6d7e0c9893708098ab7f40ed19d37612}{Strunk}{S\bibinitperiod}{William}{W\bibinitperiod}{}{}{Jr}{J\bibinitperiod}}%
-        {{uniquename=0,hash=492c9377c245efb97227dbac50005aa7}{White}{W\bibinitperiod}{Elwyn\bibnamedelima Brooks}{E\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
-      }
-      \list{publisher}{1}{%
-        {Longman}%
-      }
-      \strng{namehash}{5bc3f364838b710069dc59942cad06fd}
-      \strng{fullhash}{5bc3f364838b710069dc59942cad06fd}
-      \field{sortinit}{S}
-      \field{labelyear}{1999}
-      \field{labeltitle}{The Elements of Style}
-      \field{edition}{Fourth}
-      \field{isbn}{020530902X}
-      \field{title}{The Elements of Style}
-      \field{year}{1999}
-    \endentry
-    \entry{tagstore}{online}{}
-      \name{labelname}{1}{}{%
-        {{uniquename=0,hash=cc6434e5b4df4f3c8dfbf018520653ed}{Voit}{V\bibinitperiod}{Karl}{K\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=cc6434e5b4df4f3c8dfbf018520653ed}{Voit}{V\bibinitperiod}{Karl}{K\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{cc6434e5b4df4f3c8dfbf018520653ed}
-      \strng{fullhash}{cc6434e5b4df4f3c8dfbf018520653ed}
-      \field{sortinit}{V}
-      \field{labelyear}{2011}
-      \field{labelmonth}{12}
-      \field{labeltitle}{tagstore --- Project home page}
-      \field{month}{12}
-      \field{title}{tagstore --- Project home page}
-      \field{urlday}{10}
-      \field{urlmonth}{12}
-      \field{urlyear}{2011}
-      \field{year}{2011}
-      \verb{url}
-      \verb http://tagstore.org
-      \endverb
-    \endentry
-    \entry{Zobel-WritingCompSci}{book}{}
-      \name{labelname}{1}{}{%
-        {{uniquename=0,hash=fec3a08fc98ee9b65f31e424408ed08f}{Zobel}{Z\bibinitperiod}{Justin}{J\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=fec3a08fc98ee9b65f31e424408ed08f}{Zobel}{Z\bibinitperiod}{Justin}{J\bibinitperiod}{}{}{}{}}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{fec3a08fc98ee9b65f31e424408ed08f}
-      \strng{fullhash}{fec3a08fc98ee9b65f31e424408ed08f}
-      \field{sortinit}{Z}
-      \field{labelyear}{2004}
-      \field{labeltitle}{Writing for Computer Science}
-      \field{edition}{Second}
-      \field{isbn}{1852338024}
-      \field{title}{Writing for Computer Science}
-      \field{year}{2004}
-    \endentry
   \endsortlist
   \missing{http://www.w3.org/TR/soap9/}
   \missing{https://itunes.apple.com/de/app/addition-master-mathematik/id672669932?mt=8}
@@ -348,6 +115,8 @@
   \missing{https://itunes.apple.com/de/app/addition-subtraction-for-kids/id426907035?mt=8}
   \missing{https://itunes.apple.com/de/genre/ios/id36?mt=8}
   \missing{http://sudzc.com}
+  \missing{https://developer.apple.com/library/ios/documentation/userexperience/conceptual/mobilehig/}
+  \missing{https://developer.apple.com/library/mac/documentation/cocoa/Reference/Foundation/Classes/NSUserDefaults_Class/Reference/Reference.html}
   \missing{http://www.gnu.org/software/gnustep/resources/documentation/Developer/Base/ProgrammingManual/manual_toc.html [Zugriff am 24.10.2013]}
   \missing{https://itunes.apple.com/de/app/addition-subtraction/id542109601?mt=8}
   \missing{https://itunes.apple.com/de/app/add-sub/id693077439?mt=8}
