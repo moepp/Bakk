@@ -530,6 +530,7 @@ BCOR=\myBCOR,        %% binding correction (depends on how you bind
 %doc% \end{itemize}
 %doc% 
 %doc% 
+
 \usepackage[backend=biber, %% using "biber" to compile references (instead of "biblatex")
 style=\mybiblatexstyle, %% see biblatex documentation
 %style=alphabetic, %% see biblatex documentation
@@ -541,7 +542,12 @@ hyperref=true, %% using hyperref-package references
 
 \addbibresource{\mybiblatexfile} %% remove, if using BibTeX instead of biblatex
 
-
+%%\DeclareCiteCommand{\footcite}[\mkbibfootnote]
+%%  {\usebibmacro{prenote}}
+%%  {\usebibmacro{citeindex}%
+%%   \printtext[brackets]{\usebibmacro{cite}}}
+%%  {\multicitedelim}
+%%  {\usebibmacro{postnote}}
 
 %doc% 
 %doc% \subsection{Miscellaneous packages} \label{subsec:miscpackages}
@@ -690,6 +696,7 @@ escapeinside={\%*}{*)}          % if you want to add a comment within your code
 \usepackage{tikz}
 \newcommand\LM{\ensuremath{\mathit{LM}}}
 \newcommand\IS{\ensuremath{\mathit{IS}}}
+
 
 
 
